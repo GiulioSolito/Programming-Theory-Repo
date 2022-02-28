@@ -7,11 +7,12 @@ public class Food : MonoBehaviour
     public enum FoodType { SANDWICH, ENERGY_CAN, PIZZA, APPLE, STEAK, CARROT };
     [SerializeField] private FoodType _foodType;
 
-    [SerializeField] private float _rotateSpeed = 50f;
-
-    // Update is called once per frame
-    void FixedUpdate()
+    private void OnTriggerEnter(Collider other)
     {
-        transform.Rotate(0, _rotateSpeed * Time.deltaTime, 0);
+        if (other.CompareTag("Animal"))
+        {
+            //TODO: Kill animal and add score
+            Destroy(gameObject);
+        }
     }
 }

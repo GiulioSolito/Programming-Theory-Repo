@@ -2,9 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : MonoSingleton<Player>
 {
     [SerializeField] private float _speed = 10f;
+    [SerializeField] private int _lives = 3;
+    public int Lives
+    {
+        get { return _lives; }
+        private set { _lives = value; }
+    }
+
+    [SerializeField] private GameObject _projectile;
+    [SerializeField] private float _fireRate = 0.15f;
+    private float _canFire = 0f;
 
     [SerializeField] private float _xMin, _xMax, _zMin, _zMax;
 
@@ -15,6 +25,11 @@ public class Player : MonoBehaviour
     void Update()
     {
         Move();
+
+        if (Input.GetButtonDown("Fire1") && Time.time > _canFire)
+        {
+            Shoot();
+        }
     }
 
     void Move() // ABSTRACTION
@@ -27,5 +42,26 @@ public class Player : MonoBehaviour
 
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, _xMin, _xMax), transform.position.y,
                                          Mathf.Clamp(transform.position.z, _zMin, _zMax));
+    }
+
+    void Shoot() // ABSTRACTION
+    {
+        _canFire = Time.time + _fireRate;
+
+        GameObject go = Instantiate(_projectile, transform.position, _projectile.transform.rotation);
+        go.GetComponent<Rotate>().enabled = false;
+        go.GetComponent<MoveForward>().enabled = true;
+    }
+
+    public void DamagePlayer()
+    {
+        Lives--;
+
+        if (Lives <= 0)
+        {
+            Debug.Log("Player has died!");
+            Lives = 0;
+            SpawnManager.Instance.IsSpawning = false;
+        }
     }
 }

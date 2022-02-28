@@ -11,7 +11,10 @@ GameObject:
   - component: {fileID: 1900635813744191587}
   - component: {fileID: 1900635813745456497}
   - component: {fileID: 1900635813746477027}
+  - component: {fileID: 1936396681999606496}
   - component: {fileID: 3339991899629352398}
+  - component: {fileID: 6388379811939203502}
+  - component: {fileID: 1387528171967576108}
   m_Layer: 0
   m_Name: Food_Steak_01
   m_TagString: Untagged
@@ -82,6 +85,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1936396681999606496
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1900635813744258479}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6, y: 0.2, z: 0.7}
+  m_Center: {x: 0, y: 0.04279684, z: 0}
 --- !u!114 &3339991899629352398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95,4 +111,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _foodType: 4
+--- !u!114 &6388379811939203502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1900635813744258479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91f3cd1cb07623546a23966dc30b0529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   _rotateSpeed: 50
+--- !u!114 &1387528171967576108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1900635813744258479}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5277c9e995eed20469ad7a0930345300, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 15

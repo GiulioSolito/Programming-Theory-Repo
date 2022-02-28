@@ -7,6 +7,7 @@ public class SpawnManager : MonoSingleton<SpawnManager>
     [SerializeField] private GameObject[] _animalPrefabs;
     [SerializeField] private GameObject _foxPrefab;
     [SerializeField] private Transform[] _spawnPoints;
+    [SerializeField] private Transform _parentHolder;
 
     [SerializeField] private float _animalSpawnRate = 2f;
     [SerializeField] private float _foxSpawnRate = 10f;
@@ -37,8 +38,10 @@ public class SpawnManager : MonoSingleton<SpawnManager>
             int animalIndex = Random.Range(0, _animalPrefabs.Length);
             int spawnPointIndex = Random.Range(0, _spawnPoints.Length);
 
-            Instantiate(_animalPrefabs[animalIndex], _spawnPoints[spawnPointIndex].position,
+            GameObject go = Instantiate(_animalPrefabs[animalIndex], _spawnPoints[spawnPointIndex].position,
                         _spawnPoints[spawnPointIndex].rotation);
+
+            go.transform.SetParent(_parentHolder);
         }
     }
 
@@ -50,8 +53,10 @@ public class SpawnManager : MonoSingleton<SpawnManager>
             yield return new WaitForSeconds(_foxSpawnRate);
             int spawnPointIndex = Random.Range(0, _spawnPoints.Length);
 
-            Instantiate(_foxPrefab, _spawnPoints[spawnPointIndex].position,
+            GameObject go = Instantiate(_foxPrefab, _spawnPoints[spawnPointIndex].position,
                         _spawnPoints[spawnPointIndex].rotation);
+
+            go.transform.SetParent(_parentHolder);
         }
     }
 }
