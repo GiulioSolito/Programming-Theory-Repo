@@ -76,6 +76,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 4
+  _favoriteFoods:
+  - {fileID: 7771508623464940765, guid: d92a2481e820b254bb76b9d8d187d1f3, type: 3}
+  - {fileID: 6367763134867437243, guid: b92f1c1b343f0fe458490e2614bb2329, type: 3}
+  - {fileID: 283328136037221204, guid: 5af688581a821414db089b0fdc3bd650, type: 3}
+  _currentFavoriteFood: {fileID: 0}
 --- !u!65 &7060274624632428826
 BoxCollider:
   m_ObjectHideFlags: 0

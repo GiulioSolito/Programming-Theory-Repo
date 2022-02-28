@@ -12,6 +12,13 @@ public class Player : MonoSingleton<Player>
         private set { _lives = value; }
     }
 
+    [SerializeField] private int _score = 0;
+    public int Score 
+    {
+        get { return _score; }
+        private set { _score = value; }
+    }
+
     [SerializeField] private GameObject _projectile;
     [SerializeField] private float _fireRate = 0.15f;
     private float _canFire = 0f;
@@ -53,6 +60,11 @@ public class Player : MonoSingleton<Player>
         go.GetComponent<MoveForward>().enabled = true;
     }
 
+    public void AddScore(int amount)
+    {
+        Score += amount;
+    }
+
     public void DamagePlayer()
     {
         Lives--;
@@ -62,6 +74,7 @@ public class Player : MonoSingleton<Player>
             Debug.Log("Player has died!");
             Lives = 0;
             SpawnManager.Instance.IsSpawning = false;
+            SpawnManager.Instance.StopAllCoroutines();
         }
     }
 }

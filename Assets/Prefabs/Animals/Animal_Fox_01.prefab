@@ -161,6 +161,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 4
+  _favoriteFoods:
+  - {fileID: 4001416186922501682, guid: 2c8b7a6eb002da043a9fa5cbad7b8283, type: 3}
+  _currentFavoriteFood: {fileID: 0}
 --- !u!65 &-1415871772915671613
 BoxCollider:
   m_ObjectHideFlags: 0

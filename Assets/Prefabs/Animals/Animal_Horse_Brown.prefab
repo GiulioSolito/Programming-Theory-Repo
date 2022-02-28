@@ -1428,6 +1428,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 4
+  _favoriteFoods:
+  - {fileID: 3848828017870338815, guid: eaa814b1e94904d4da2cbdf3f8ef0e40, type: 3}
+  - {fileID: 7771508623464940765, guid: d92a2481e820b254bb76b9d8d187d1f3, type: 3}
+  - {fileID: 6367763134867437243, guid: b92f1c1b343f0fe458490e2614bb2329, type: 3}
+  - {fileID: 1900635813744258479, guid: 8a53870582c18f243abc14ab534439ca, type: 3}
+  _currentFavoriteFood: {fileID: 0}
 --- !u!65 &1676378544784343364
 BoxCollider:
   m_ObjectHideFlags: 0
