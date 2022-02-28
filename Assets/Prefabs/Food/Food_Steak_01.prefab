@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4001416186922501682
+--- !u!1 &1900635813744258479
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,59 +8,59 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4001416186922539538}
-  - component: {fileID: 4001416186925439538}
-  - component: {fileID: 4001416186924439794}
-  - component: {fileID: 6920778715170102893}
+  - component: {fileID: 1900635813744191587}
+  - component: {fileID: 1900635813745456497}
+  - component: {fileID: 1900635813746477027}
+  - component: {fileID: 3339991899629352398}
   m_Layer: 0
-  m_Name: Food_EnergyCan_01
+  m_Name: Food_Steak_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4001416186922539538
+--- !u!4 &1900635813744191587
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4001416186922501682}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.04745, y: 0.24642117, z: 1.6751032}
+  m_GameObject: {fileID: 1900635813744258479}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.1, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &4001416186925439538
+--- !u!33 &1900635813745456497
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4001416186922501682}
-  m_Mesh: {fileID: 4300000, guid: 6b10d5dd38b22314f932fba49fc26253, type: 3}
---- !u!23 &4001416186924439794
+  m_GameObject: {fileID: 1900635813744258479}
+  m_Mesh: {fileID: 4300000, guid: c55426ee7a822ec4c8ceed2eb60a805e, type: 3}
+--- !u!23 &1900635813746477027
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4001416186922501682}
+  m_GameObject: {fileID: 1900635813744258479}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
-  m_LightProbeUsage: 0
+  m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: dc043a9656f81bc488510dcda2b382ab, type: 2}
+  - {fileID: 2100000, guid: 5a3559dc71a3dee46a71f5627f48bb36, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -82,17 +82,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &6920778715170102893
+--- !u!114 &3339991899629352398
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4001416186922501682}
+  m_GameObject: {fileID: 1900635813744258479}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d3c142a5a039e30458a4b698cb0d5e79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _foodType: 1
+  _foodType: 4
   _rotateSpeed: 50

@@ -27,6 +27,8 @@ public class SpawnManager : MonoSingleton<SpawnManager>
 
     IEnumerator SpawnAnimals() // ABSTRACTION
     {
+        yield return new WaitForSeconds(5f);
+
         while (_isSpawning)
         {
             yield return new WaitForSeconds(_animalSpawnRate);
