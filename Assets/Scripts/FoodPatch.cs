@@ -29,6 +29,7 @@ public class FoodPatch : MonoBehaviour
             yield return new WaitForSeconds(_spawnRate);
 
             go = Instantiate(_foodToSpawn, _spawnPoint.position,_spawnPoint.rotation);
+            go.name = go.name.Replace("(Clone)", "").Trim();
             go.transform.SetParent(_spawnPoint);
             _hasItemSpawned = true;
         }
@@ -37,7 +38,9 @@ public class FoodPatch : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
-        {
+        {            
+            other.GetComponent<Player>().Projectile = (GameObject)Resources.Load("Food/" + go.gameObject.name, typeof(GameObject));     
+            //Debug.Log("Food/"+)
             Destroy(go.gameObject);
             _hasItemSpawned = false;
             StartCoroutine(SpawnFood());

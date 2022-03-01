@@ -20,6 +20,11 @@ public class Player : MonoSingleton<Player>
     }
 
     [SerializeField] private GameObject _projectile;
+    public GameObject Projectile
+    {
+        get { return _projectile; }
+        set { _projectile = value; }
+    }
     [SerializeField] private float _fireRate = 0.15f;
     private float _canFire = 0f;
 
