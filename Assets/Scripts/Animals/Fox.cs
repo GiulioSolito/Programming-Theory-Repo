@@ -10,7 +10,7 @@ public class Fox : Animal
     {
         base.Start();
         AssignFoodPatches();
-        ChooseFoodPatch();
+        StartCoroutine(ChooseFoodPatch());
     }
 
     void AssignFoodPatches()
@@ -23,8 +23,9 @@ public class Fox : Animal
         }
     }
 
-    void ChooseFoodPatch()
+    IEnumerator ChooseFoodPatch()
     {
+        yield return new WaitForSeconds(3f);
         Transform target = _foodPatches[Random.Range(0, _foodPatches.Count)].transform;
         transform.LookAt(target);
     }

@@ -32,6 +32,10 @@ public class Food : MonoBehaviour
             else
             {
                 Debug.Log("Incorrect Food!");
+                if (other.GetComponent<IAnimal>() != null)
+                {
+                    other.GetComponent<IAnimal>().IncorrectFoodFed();
+                }
                 Player.Instance.DamagePlayer();
             }
             Destroy(gameObject);

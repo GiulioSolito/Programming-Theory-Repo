@@ -51,7 +51,7 @@ public class FoodPatch : MonoBehaviour
             Destroy(go.gameObject);
             _hasItemSpawned = false;
             StartCoroutine(SpawnFood(_destroyedSpawnRate));
-            Destroy(other.gameObject, 3f);
+            Destroy(other.gameObject, 5f);
         }
     }
 }

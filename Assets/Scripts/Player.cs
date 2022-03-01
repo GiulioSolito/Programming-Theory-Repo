@@ -42,7 +42,6 @@ public class Player : MonoSingleton<Player>
         {
             Shoot();
         }
-        Debug.Log(Time.time);
     }
 
     void Move() // ABSTRACTION
