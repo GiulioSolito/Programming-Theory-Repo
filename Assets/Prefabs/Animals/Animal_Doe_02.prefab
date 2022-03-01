@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 37095792433582118}
   - component: {fileID: 37095792430703728}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Doe_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 37095792433585808}
   - component: {fileID: 37095792430647768}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Doe_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 5651115013532568049}
   - component: {fileID: 5878986134673836299}
   - component: {fileID: 5018523431484450797}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Animal_Doe_02
   m_TagString: Animal
   m_Icon: {fileID: 0}
@@ -242,11 +242,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 4
+  _hitsNeededToSatisfy: 1
   _favoriteFoods:
   - {fileID: 7771508623464940765, guid: d92a2481e820b254bb76b9d8d187d1f3, type: 3}
   - {fileID: 283328136037221204, guid: 5af688581a821414db089b0fdc3bd650, type: 3}
   - {fileID: 6367763134867437243, guid: b92f1c1b343f0fe458490e2614bb2329, type: 3}
-  _currentFavoriteFood: {fileID: 0}
+  _currentFavoriteFood: 0
+  _timeToChangeFood: 3
 --- !u!65 &5878986134673836299
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -286,7 +288,7 @@ GameObject:
   m_Component:
   - component: {fileID: 37095792433581246}
   - component: {fileID: 37095792430683816}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Stag_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -369,7 +371,7 @@ GameObject:
   m_Component:
   - component: {fileID: 37095792433655436}
   - component: {fileID: 37095792430662952}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Moose_Female_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -452,7 +454,7 @@ GameObject:
   m_Component:
   - component: {fileID: 37095792433687126}
   - component: {fileID: 37095792430736538}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Stag_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -535,7 +537,7 @@ GameObject:
   m_Component:
   - component: {fileID: 37095792433657260}
   - component: {fileID: 37095792430637532}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Moose_Male_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -618,7 +620,7 @@ GameObject:
   m_Component:
   - component: {fileID: 37095792433612396}
   - component: {fileID: 37095792430682014}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Moose_Female_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -701,7 +703,7 @@ GameObject:
   m_Component:
   - component: {fileID: 37095792433633618}
   - component: {fileID: 37095792430659040}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Stag_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -784,7 +786,7 @@ GameObject:
   m_Component:
   - component: {fileID: 37095792433684580}
   - component: {fileID: 37095792430638750}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Moose_Male_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -867,7 +869,7 @@ GameObject:
   m_Component:
   - component: {fileID: 37095792433595724}
   - component: {fileID: 37095792430689192}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Moose_Male_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 55580832693709109}
   - component: {fileID: 55580832707099729}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Fox_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 2327259917481728319}
   - component: {fileID: -1415871772915671613}
   - component: {fileID: -2694715055676721162}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Animal_Fox_01
   m_TagString: Animal
   m_Icon: {fileID: 0}
@@ -161,9 +161,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 4
+  _hitsNeededToSatisfy: 1
   _favoriteFoods:
   - {fileID: 4001416186922501682, guid: 2c8b7a6eb002da043a9fa5cbad7b8283, type: 3}
-  _currentFavoriteFood: {fileID: 0}
+  _currentFavoriteFood: 0
+  _timeToChangeFood: 3
 --- !u!65 &-1415871772915671613
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -203,7 +205,7 @@ GameObject:
   m_Component:
   - component: {fileID: 55580832693737977}
   - component: {fileID: 55580832707092829}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Fox_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -286,7 +288,7 @@ GameObject:
   m_Component:
   - component: {fileID: 55580832693652181}
   - component: {fileID: 55580832707110079}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Wolf_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -369,7 +371,7 @@ GameObject:
   m_Component:
   - component: {fileID: 55580832693706303}
   - component: {fileID: 55580832707083263}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Skunk_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -452,7 +454,7 @@ GameObject:
   m_Component:
   - component: {fileID: 55580832693690039}
   - component: {fileID: 55580832707106615}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Skunk_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -535,7 +537,7 @@ GameObject:
   m_Component:
   - component: {fileID: 55580832693697483}
   - component: {fileID: 55580832707107331}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Wolf_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -618,7 +620,7 @@ GameObject:
   m_Component:
   - component: {fileID: 55580832693654131}
   - component: {fileID: 55580832706908831}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Raccoon_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -701,7 +703,7 @@ GameObject:
   m_Component:
   - component: {fileID: 55580832693692195}
   - component: {fileID: 55580832706873257}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Raccoon_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -784,7 +786,7 @@ GameObject:
   m_Component:
   - component: {fileID: 55580832693717723}
   - component: {fileID: 55580832707085777}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Wolf_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -867,7 +869,7 @@ GameObject:
   m_Component:
   - component: {fileID: 55580832693674409}
   - component: {fileID: 55580832707088153}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Raccoon_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -950,7 +952,7 @@ GameObject:
   m_Component:
   - component: {fileID: 55580832693678475}
   - component: {fileID: 55580832706867935}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Fox_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1033,7 +1035,7 @@ GameObject:
   m_Component:
   - component: {fileID: 55580832693670461}
   - component: {fileID: 55580832706868111}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Skunk_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

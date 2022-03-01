@@ -5,6 +5,7 @@ using UnityEngine;
 public abstract class Animal : MonoBehaviour
 {
     [SerializeField] protected float _speed = 4f;
+    [SerializeField] private int _hitsNeededToSatisfy = 1;
     [SerializeField] private GameObject[] _favoriteFoods;
     [SerializeField] private FoodType _currentFavoriteFood;
     public FoodType CurrentFavoriteFood
@@ -39,6 +40,16 @@ public abstract class Animal : MonoBehaviour
             _timeToChangeFood = Random.Range(3f, 5f);
             yield return new WaitForSeconds(_timeToChangeFood);
             _currentFavoriteFood = _favoriteFoods[Random.Range(0, _favoriteFoods.Length)].GetComponent<Food>().FoodType;
+        }
+    }
+
+    public void FeedAnimal()
+    {
+        _hitsNeededToSatisfy--;
+
+        if (_hitsNeededToSatisfy <= 0)
+        {
+            Destroy(gameObject);
         }
     }
 }

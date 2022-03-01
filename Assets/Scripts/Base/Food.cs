@@ -19,6 +19,7 @@ public class Food : MonoBehaviour
             if (other.GetComponent<Animal>().CurrentFavoriteFood == _foodType)
             {
                 Debug.Log("Correct Food!");
+                other.GetComponent<Animal>().FeedAnimal();
                 Player.Instance.AddScore(10);
             }
             else
