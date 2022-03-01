@@ -42,6 +42,7 @@ public class Player : MonoSingleton<Player>
         {
             Shoot();
         }
+        Debug.Log(Time.time);
     }
 
     void Move() // ABSTRACTION
@@ -63,6 +64,7 @@ public class Player : MonoSingleton<Player>
         GameObject go = Instantiate(_projectile, transform.position, _projectile.transform.rotation);
         go.GetComponent<Rotate>().enabled = false;
         go.GetComponent<MoveForward>().enabled = true;
+        go.GetComponent<Food>().CanDamageAnimal = true;
     }
 
     public void AddScore(int amount)

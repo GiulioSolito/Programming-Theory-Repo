@@ -222,6 +222,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FoodPatch6
       objectReference: {fileID: 0}
+    - target: {fileID: 7404228448250663926, guid: 0315e1ccf8002f0428446bf90ef4347a, type: 3}
+      propertyPath: m_TagString
+      value: FoodPatch
+      objectReference: {fileID: 0}
     - target: {fileID: 7404228448250663933, guid: 0315e1ccf8002f0428446bf90ef4347a, type: 3}
       propertyPath: _spawnRate
       value: 5
@@ -358,6 +362,10 @@ PrefabInstance:
     - target: {fileID: 7404228448250663926, guid: 0315e1ccf8002f0428446bf90ef4347a, type: 3}
       propertyPath: m_Name
       value: FoodPatch3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7404228448250663926, guid: 0315e1ccf8002f0428446bf90ef4347a, type: 3}
+      propertyPath: m_TagString
+      value: FoodPatch
       objectReference: {fileID: 0}
     - target: {fileID: 7404228448250663933, guid: 0315e1ccf8002f0428446bf90ef4347a, type: 3}
       propertyPath: _spawnRate
@@ -774,6 +782,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FoodPatch5
       objectReference: {fileID: 0}
+    - target: {fileID: 7404228448250663926, guid: 0315e1ccf8002f0428446bf90ef4347a, type: 3}
+      propertyPath: m_TagString
+      value: FoodPatch
+      objectReference: {fileID: 0}
     - target: {fileID: 7404228448250663933, guid: 0315e1ccf8002f0428446bf90ef4347a, type: 3}
       propertyPath: _spawnRate
       value: 5
@@ -915,6 +927,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FoodPatch2
       objectReference: {fileID: 0}
+    - target: {fileID: 7404228448250663926, guid: 0315e1ccf8002f0428446bf90ef4347a, type: 3}
+      propertyPath: m_TagString
+      value: FoodPatch
+      objectReference: {fileID: 0}
     - target: {fileID: 7404228448250663933, guid: 0315e1ccf8002f0428446bf90ef4347a, type: 3}
       propertyPath: _spawnRate
       value: 5
@@ -997,6 +1013,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FoodPatch4
       objectReference: {fileID: 0}
+    - target: {fileID: 7404228448250663926, guid: 0315e1ccf8002f0428446bf90ef4347a, type: 3}
+      propertyPath: m_TagString
+      value: FoodPatch
+      objectReference: {fileID: 0}
     - target: {fileID: 7404228448250663933, guid: 0315e1ccf8002f0428446bf90ef4347a, type: 3}
       propertyPath: _spawnRate
       value: 5
@@ -1022,6 +1042,10 @@ PrefabInstance:
     - target: {fileID: 1437194507624239736, guid: 58cf91fa6c3f06d4d86207aa2205fd12, type: 3}
       propertyPath: m_Name
       value: EndPoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 1437194507624239736, guid: 58cf91fa6c3f06d4d86207aa2205fd12, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1437194507624239737, guid: 58cf91fa6c3f06d4d86207aa2205fd12, type: 3}
       propertyPath: m_RootOrder
@@ -1180,6 +1204,10 @@ PrefabInstance:
     - target: {fileID: 7404228448250663926, guid: 0315e1ccf8002f0428446bf90ef4347a, type: 3}
       propertyPath: m_Name
       value: FoodPatch1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7404228448250663926, guid: 0315e1ccf8002f0428446bf90ef4347a, type: 3}
+      propertyPath: m_TagString
+      value: FoodPatch
       objectReference: {fileID: 0}
     - target: {fileID: 7404228448250663933, guid: 0315e1ccf8002f0428446bf90ef4347a, type: 3}
       propertyPath: _spawnRate

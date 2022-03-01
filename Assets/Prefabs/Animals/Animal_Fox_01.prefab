@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: -2694715055676721162}
   m_Layer: 6
   m_Name: Animal_Fox_01
-  m_TagString: Animal
+  m_TagString: Fox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -164,8 +164,9 @@ MonoBehaviour:
   _hitsNeededToSatisfy: 1
   _favoriteFoods:
   - {fileID: 4001416186922501682, guid: 2c8b7a6eb002da043a9fa5cbad7b8283, type: 3}
-  _currentFavoriteFood: 0
+  _currentFavoriteFood: 1
   _timeToChangeFood: 3
+  _foodPatches: []
 --- !u!65 &-1415871772915671613
 BoxCollider:
   m_ObjectHideFlags: 0

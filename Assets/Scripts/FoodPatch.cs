@@ -6,6 +6,7 @@ public class FoodPatch : MonoBehaviour
 {
     [SerializeField] private GameObject _foodToSpawn;
     [SerializeField] private float _spawnRate = 2f;
+    [SerializeField] private float _destroyedSpawnRate;
 
     [SerializeField] private bool _isSpawning = true;
     [SerializeField] private bool _hasItemSpawned = false;
@@ -17,16 +18,17 @@ public class FoodPatch : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _destroyedSpawnRate = _spawnRate * 2f;
         _spawnPoint = transform.Find("FoodSpawnPoint");
 
-        StartCoroutine(SpawnFood());
+        StartCoroutine(SpawnFood(_spawnRate));
     }
 
-    IEnumerator SpawnFood() // ABSTRACTION
+    IEnumerator SpawnFood(float spawnRate) // ABSTRACTION
     {
         if(_isSpawning == true && _hasItemSpawned == false)
         {
-            yield return new WaitForSeconds(_spawnRate);
+            yield return new WaitForSeconds(spawnRate);
 
             go = Instantiate(_foodToSpawn, _spawnPoint.position,_spawnPoint.rotation);
             go.name = go.name.Replace("(Clone)", "").Trim();
@@ -42,7 +44,14 @@ public class FoodPatch : MonoBehaviour
             other.GetComponent<Player>().Projectile = (GameObject)Resources.Load("Food/" + go.gameObject.name, typeof(GameObject));     
             Destroy(go.gameObject);
             _hasItemSpawned = false;
-            StartCoroutine(SpawnFood());
+            StartCoroutine(SpawnFood(_spawnRate));
+        }
+        else if (other.CompareTag("Fox"))
+        {
+            Destroy(go.gameObject);
+            _hasItemSpawned = false;
+            StartCoroutine(SpawnFood(_destroyedSpawnRate));
+            Destroy(other.gameObject, 3f);
         }
     }
 }

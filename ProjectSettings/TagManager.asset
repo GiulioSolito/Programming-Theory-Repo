@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Animal
+  - FoodPatch
+  - Fox
   layers:
   - Default
   - TransparentFX

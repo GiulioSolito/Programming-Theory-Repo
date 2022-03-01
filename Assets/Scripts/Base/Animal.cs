@@ -16,7 +16,7 @@ public abstract class Animal : MonoBehaviour
 
     [SerializeField] private float _timeToChangeFood = 3f;
 
-    private void Start()
+    protected virtual void Start()
     {
         _currentFavoriteFood = _favoriteFoods[Random.Range(0, _favoriteFoods.Length)].GetComponent<Food>().FoodType;
         StartCoroutine(ChangeFavoriteFood());
