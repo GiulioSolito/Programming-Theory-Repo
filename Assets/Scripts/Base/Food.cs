@@ -20,7 +20,7 @@ public class Food : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Animal") || other.CompareTag("Fox") && _canDamageAnimal)
+        if (other.CompareTag("Animal") || other.CompareTag("Doe") || other.CompareTag("Fox") && _canDamageAnimal)
         {
             //TODO: Kill animal and add score
             if (other.GetComponent<Animal>().CurrentFavoriteFood == _foodType)
