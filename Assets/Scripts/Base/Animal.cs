@@ -5,6 +5,7 @@ using UnityEngine;
 public abstract class Animal : MonoBehaviour
 {
     [SerializeField] protected float _speed = 4f;
+    protected float _originalSpeed;
     [SerializeField] private int _hitsNeededToSatisfy = 1;
     [SerializeField] private GameObject[] _favoriteFoods;
     [SerializeField] private FoodType _currentFavoriteFood;
@@ -18,6 +19,7 @@ public abstract class Animal : MonoBehaviour
 
     protected virtual void Start()
     {
+        _originalSpeed = _speed;
         _currentFavoriteFood = _favoriteFoods[Random.Range(0, _favoriteFoods.Length)].GetComponent<Food>().FoodType;
         StartCoroutine(ChangeFavoriteFood());
     }
