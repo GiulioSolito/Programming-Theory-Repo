@@ -27,7 +27,7 @@ public class Food : MonoBehaviour
             {
                 Debug.Log("Correct Food!");
                 other.GetComponent<Animal>().FeedAnimal();
-                Player.Instance.AddScore(10);
+                Player.Instance.AddScore(10);                
             }
             else
             {
@@ -36,7 +36,7 @@ public class Food : MonoBehaviour
                 {
                     other.GetComponent<IAnimal>().IncorrectFoodFed();
                 }
-                Player.Instance.DamagePlayer();
+                Player.Instance.DamagePlayer();                
             }
             Destroy(gameObject);
         }

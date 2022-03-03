@@ -27,6 +27,7 @@ public class Player : MonoSingleton<Player>
     }
     [SerializeField] private float _fireRate = 0.15f;
     private float _canFire = 0f;
+    private bool _canShoot = true;
 
     [SerializeField] private float _xMin, _xMax, _zMin, _zMax;
 
@@ -38,7 +39,7 @@ public class Player : MonoSingleton<Player>
     {
         Move();
 
-        if (Input.GetButtonDown("Fire1") && Time.time > _canFire)
+        if (Input.GetButtonDown("Fire1") && Time.time > _canFire && _canShoot)
         {
             Shoot();
         }
@@ -46,6 +47,10 @@ public class Player : MonoSingleton<Player>
 
     void Move() // ABSTRACTION
     {
+        if (Lives <= 0)
+        {
+            return;
+        }
         _horInput = Input.GetAxis("Horizontal");
         _verInput = Input.GetAxis("Vertical");
 
@@ -69,16 +74,20 @@ public class Player : MonoSingleton<Player>
     public void AddScore(int amount)
     {
         Score += amount;
+        MainUI.Instance.scoreUI.text = "Score: " + Score;
     }
 
     public void DamagePlayer()
     {
         Lives--;
 
+        MainUI.Instance.livesUI.text = "Lives: " + Lives;
+
         if (Lives <= 0)
         {
-            Debug.Log("Player has died!");
+            _canShoot = false;
             Lives = 0;
+            MainUI.Instance.gameOverUI.SetActive(true);
             SpawnManager.Instance.IsSpawning = false;
             SpawnManager.Instance.StopAllCoroutines();
         }

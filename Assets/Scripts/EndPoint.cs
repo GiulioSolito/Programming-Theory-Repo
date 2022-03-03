@@ -8,6 +8,7 @@ public class EndPoint : MonoBehaviour
     {
         Debug.Log("End Point Reached");
         Player.Instance.DamagePlayer();
+        MainUI.Instance.livesUI.text = "Lives: " + Player.Instance.Lives;
         Destroy(other.gameObject);
     }
 }

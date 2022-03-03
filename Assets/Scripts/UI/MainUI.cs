@@ -1,14 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 using UnityEngine.SceneManagement;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
 
-public class MenuUI : MonoBehaviour
+public class MainUI : MonoSingleton<MainUI>
 {
-    public void StartGame()
+    [SerializeField] public TextMeshProUGUI livesUI;
+    [SerializeField] public TextMeshProUGUI scoreUI;
+    [SerializeField] public GameObject gameOverUI;
+
+    public void RetryGame()
     {
         SceneManager.LoadScene(1);
     }
