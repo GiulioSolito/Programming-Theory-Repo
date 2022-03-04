@@ -4,12 +4,12 @@ using UnityEngine;
 
 public abstract class Animal : MonoBehaviour
 {
-    [SerializeField] protected float _speed = 4f;
+    [SerializeField] protected float _speed = 4f; 
     protected float _originalSpeed;
     [SerializeField] private int _hitsNeededToSatisfy = 1;
     [SerializeField] private GameObject[] _favoriteFoods;
     [SerializeField] private FoodType _currentFavoriteFood;
-    public FoodType CurrentFavoriteFood
+    public FoodType CurrentFavoriteFood // ENCAPSULATION
     {
         get { return _currentFavoriteFood; }
         private set { _currentFavoriteFood = value; }
@@ -41,7 +41,7 @@ public abstract class Animal : MonoBehaviour
         transform.Translate(Vector3.forward * _speed * Time.deltaTime);
     }
 
-    IEnumerator ChangeFavoriteFood()
+    IEnumerator ChangeFavoriteFood() // ABSTRACTION
     {
         while (true)
         {
@@ -54,14 +54,14 @@ public abstract class Animal : MonoBehaviour
         }
     }
 
-    void SetFoodDisplay()
+    void SetFoodDisplay() // ABSTRACTION
     {
         _displayFood = Instantiate(_favoriteFoods[_foodIndex], _foodDisplayParent.position, Quaternion.Euler(new Vector3(0,0,0)));
         _displayFood.transform.SetParent(_foodDisplayParent);
         _displayFood.GetComponent<Collider>().enabled = false;
     }
 
-    public void FeedAnimal()
+    public void FeedAnimal() // ABSTRACTION
     {
         _hitsNeededToSatisfy--;
 

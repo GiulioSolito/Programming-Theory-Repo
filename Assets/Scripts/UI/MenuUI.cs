@@ -8,12 +8,12 @@ using UnityEditor;
 
 public class MenuUI : MonoBehaviour
 {
-    public void StartGame()
+    public void StartGame() // ABSTRACTION
     {
         SceneManager.LoadScene(1);
     }
 
-    public void QuitGame()
+    public void QuitGame() // ABSTRACTION
     {
 #if UNITY_EDITOR
         EditorApplication.ExitPlaymode();

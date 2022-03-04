@@ -13,12 +13,12 @@ public class MainUI : MonoSingleton<MainUI>
     [SerializeField] public TextMeshProUGUI scoreUI;
     [SerializeField] public GameObject gameOverUI;
 
-    public void RetryGame()
+    public void RetryGame() // ABSTRACTION
     {
         SceneManager.LoadScene(1);
     }
 
-    public void QuitGame()
+    public void QuitGame() // ABSTRACTION
     {
 #if UNITY_EDITOR
         EditorApplication.ExitPlaymode();

@@ -2,19 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Doe : Animal, IAnimal
+public class Doe : Animal, IAnimal // INHERITANCE
 {
     private Renderer _rend;
     private Animator _anim;
 
-    protected override void Start()
+    protected override void Start() // POLYMORPHISM
     {
         base.Start();
         _rend = GetComponentInChildren<Renderer>();
         _anim = GetComponent<Animator>();
     }
 
-    public void IncorrectFoodFed()
+    public void IncorrectFoodFed()  // POLYMORPHISM
     {
         foreach (GameObject doe in GameObject.FindGameObjectsWithTag("Doe"))
         {

@@ -6,21 +6,21 @@ public class Player : MonoSingleton<Player>
 {
     [SerializeField] private float _speed = 10f;
     [SerializeField] private int _lives = 3;
-    public int Lives
+    public int Lives // ENCAPSULATION
     {
         get { return _lives; }
         private set { _lives = value; }
     }
 
     [SerializeField] private int _score = 0;
-    public int Score 
+    public int Score // ENCAPSULATION
     {
         get { return _score; }
         private set { _score = value; }
     }
 
     [SerializeField] private GameObject _projectile;
-    public GameObject Projectile
+    public GameObject Projectile // ENCAPSULATION
     {
         get { return _projectile; }
         set { _projectile = value; }
@@ -71,13 +71,13 @@ public class Player : MonoSingleton<Player>
         go.GetComponent<Food>().CanDamageAnimal = true;
     }
 
-    public void AddScore(int amount)
+    public void AddScore(int amount) // ABSTRACTION
     {
         Score += amount;
         MainUI.Instance.scoreUI.text = "Score: " + Score;
     }
 
-    public void DamagePlayer()
+    public void DamagePlayer() // ABSTRACTION
     {
         Lives--;
 

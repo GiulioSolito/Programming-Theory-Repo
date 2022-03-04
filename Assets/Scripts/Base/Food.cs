@@ -6,13 +6,13 @@ public enum FoodType { SANDWICH, ENERGY_CAN, PIZZA, APPLE, STEAK, CARROT };
 public class Food : MonoBehaviour
 {
     [SerializeField] private FoodType _foodType;
-    public FoodType FoodType
+    public FoodType FoodType // ENCAPSULATION
     {
         get { return _foodType; }
     }
 
     [SerializeField] private bool _canDamageAnimal = false;
-    public bool CanDamageAnimal
+    public bool CanDamageAnimal // ENCAPSULATION
     {
         get { return _canDamageAnimal; }
         set { _canDamageAnimal = value; }

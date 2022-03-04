@@ -2,21 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cow : Animal, IAnimal
+public class Cow : Animal, IAnimal // INHERITANCE
 {
     private Renderer _rend;
     private Animator _anim;
 
     private bool _isRunningCrazy = false;
 
-    protected override void Start()
+    protected override void Start() // POLYMORPHISM
     {
         base.Start();
         _rend = GetComponentInChildren<Renderer>();
         _anim = GetComponent<Animator>();
     }
 
-    public void IncorrectFoodFed()
+    public void IncorrectFoodFed() // POLYMORPHISM
     {
         _speed *= 2f;
         _rend.material.color = Color.red;
@@ -24,7 +24,7 @@ public class Cow : Animal, IAnimal
         StartCoroutine(RunCrazy());
     }
 
-    IEnumerator RunCrazy()
+    IEnumerator RunCrazy() // ABSTRACTION
     {
         _isRunningCrazy = true;
 
@@ -37,7 +37,7 @@ public class Cow : Animal, IAnimal
         }       
     }
 
-    IEnumerator Reset()
+    IEnumerator Reset() // ABSTRACTION
     {
         yield return new WaitForSeconds(6f);
         _isRunningCrazy = false;

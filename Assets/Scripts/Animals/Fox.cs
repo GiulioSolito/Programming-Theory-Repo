@@ -2,18 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Fox : Animal
+public class Fox : Animal // INHERITANCE
 {
     [SerializeField] private List<GameObject> _foodPatches = new List<GameObject>();
 
-    protected override void Start()
+    protected override void Start() // POLYMORPHISM
     {
         base.Start();
         AssignFoodPatches();
         StartCoroutine(ChooseFoodPatch());
     }
 
-    void AssignFoodPatches()
+    void AssignFoodPatches() // ABSTRACTION
     {
         GameObject[] g = GameObject.FindGameObjectsWithTag("FoodPatch");
 
@@ -23,7 +23,7 @@ public class Fox : Animal
         }
     }
 
-    IEnumerator ChooseFoodPatch()
+    IEnumerator ChooseFoodPatch() // ABSTRACTION
     {
         yield return new WaitForSeconds(3f);
         Transform target = _foodPatches[Random.Range(0, _foodPatches.Count)].transform;
