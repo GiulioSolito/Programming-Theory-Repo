@@ -15,12 +15,18 @@ public abstract class Animal : MonoBehaviour
         private set { _currentFavoriteFood = value; }
     }
 
+    private int _foodIndex;
     [SerializeField] private float _timeToChangeFood = 3f;
+    [SerializeField] private Transform _foodDisplayParent;
+    private GameObject _displayFood;
 
     protected virtual void Start()
     {
         _originalSpeed = _speed;
-        _currentFavoriteFood = _favoriteFoods[Random.Range(0, _favoriteFoods.Length)].GetComponent<Food>().FoodType;
+        _foodIndex = Random.Range(0, _favoriteFoods.Length);
+        _currentFavoriteFood = _favoriteFoods[_foodIndex].GetComponent<Food>().FoodType;
+        SetFoodDisplay();
+        
         StartCoroutine(ChangeFavoriteFood());
     }
 
@@ -41,8 +47,18 @@ public abstract class Animal : MonoBehaviour
         {
             _timeToChangeFood = Random.Range(3f, 5f);
             yield return new WaitForSeconds(_timeToChangeFood);
-            _currentFavoriteFood = _favoriteFoods[Random.Range(0, _favoriteFoods.Length)].GetComponent<Food>().FoodType;
+            _foodIndex = Random.Range(0, _favoriteFoods.Length);
+            _currentFavoriteFood = _favoriteFoods[_foodIndex].GetComponent<Food>().FoodType;
+            Destroy(_displayFood);
+            SetFoodDisplay();
         }
+    }
+
+    void SetFoodDisplay()
+    {
+        _displayFood = Instantiate(_favoriteFoods[_foodIndex], _foodDisplayParent.position, Quaternion.Euler(new Vector3(0,0,0)));
+        _displayFood.transform.SetParent(_foodDisplayParent);
+        _displayFood.GetComponent<Collider>().enabled = false;
     }
 
     public void FeedAnimal()
